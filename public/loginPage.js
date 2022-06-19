@@ -2,21 +2,21 @@
 
 const userFormOne = new UserForm();
 userFormOne.loginFormCallback = (data) => {
-    ApiConnector.login(data, response => {
-        if(ApiConnector.login) {
+    ApiConnector.login(data, response) => {
+        if(success === true) {
             location.reload();
         } else {
             userFormOne.setLoginErrorMessage(message);
         }
-    })
+    }
 };
 
 userFormOne.registerFormCallback = (data) => {
-    ApiConnector.register(data, response => {
-        if(ApiConnector.register) {
+    ApiConnector.register(data, response) => {
+        if(success === true) {
             location.reload();
         } else {
             userFormOne.setRegisterErrorMessage(message);
         }
-    })
+    }
 };
